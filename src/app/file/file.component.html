@@ -1,0 +1,6 @@
+<div class="file" (mousedown)="onFileMousedown()">
+  <span *ngFor="let word of text, index as i; trackBy: trackByIndex" [ngStyle]="styles[i]" (click)="onWordClick($event, i)">{{word}}</span>
+</div>
+<div class="similar-list">
+  <span class="similar-item" *ngFor="let i of similar | async" (click)=onSimilarCLick(i)>{{i}}</span>
+</div>

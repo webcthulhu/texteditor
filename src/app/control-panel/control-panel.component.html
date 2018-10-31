@@ -1,0 +1,6 @@
+<div class="format-actions">
+  <button class="format-action" type="button" (click)="onStyleClick('bold', null)"><b>B</b></button>
+  <button class="format-action" type="button" (click)="onStyleClick('italic', null)"><i>I</i></button>
+  <button class="format-action" type="button" (click)="onStyleClick('underline', null)"><u>U</u></button>
+  <button class="format-action color-btn" type="button" *ngFor="let color of colors" [style.backgroundColor]="color" (click)="onStyleClick('color', color)"></button>
+</div>
